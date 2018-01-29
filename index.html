@@ -5,259 +5,282 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
-			html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+		body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 		</style>
 	</head>
 	
-	<body class="w3-light-grey">
+	<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-		<!-- Page Container -->
-		<div class="w3-content w3-margin-top" style="max-width:1400px;">
+		<!-- Sidebar/menu -->
+		<nav class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-text-white w3-collapse w3-top" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+			<div>
+				<p class="w3-center"><img src="https://github.com/MrinalJain17/MrinalJain17.github.io/blob/master/assets/image_mrinal_2.jpg" class="w3-circle" style="height:136px;width:136px" alt=""></p>
+				<h2 class="w3-padding-16 w3-center w3-text-red"><b>Mrinal Jain</b></h2>
+				<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+				<a href="#about" onclick="switch_page('about')" class="w3-bar-item w3-button w3-text-blue"><i class="fa fa-user-circle fa-fw w3-margin-right"></i>ABOUT ME</a>
+				<a href="#education" onclick="switch_page('education')" class="w3-bar-item w3-button"><i class="fa fa-mortar-board fa-fw w3-margin-right"></i>EDUCATION</a>
+				<a href="#work_experience" onclick="switch_page('work_experience')" class="w3-bar-item w3-button"><i class="fa fa-suitcase fa-fw w3-margin-right"></i>WORK EXPERIENCE</a>
+				<a href="#contact" onclick="switch_page('certifications')" class="w3-bar-item w3-button"><i class="fa fa-certificate fa-fw w3-margin-right"></i>CERTIFICATIONS</a>
+				<a href="#projects" onclick="switch_page('projects')" class="w3-bar-item w3-button"><i class="fa fa-paper-plane fa-fw w3-margin-right"></i>PROJECTS</a> 
+				<a href="#skills" onclick="switch_page('skills')" class="w3-bar-item w3-button"><i class="fa fa-asterisk fa-fw w3-margin-right"></i>SKILLS</a>
+			</div>
+			<div class="w3-panel w3-bottom">
+				<a href="https://www.linkedin.com/in/mrinal-jain-9b21ab114/" style="margin-left:90px" target="_blank"><i class="fa fa-linkedin-square w3-hover-opacity w3-xxlarge"></i></a>
+				<a href="https://www.github.com/MrinalJain17/" style="margin-left:5px" target="_blank"><i class="fa fa-github w3-hover-opacity w3-margin-right w3-xxlarge"></i></a>
+				<p style="font-family:georgia;"><i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>mrinaljain007@gmail.com</p>
+				<p style="font-family:georgia;"><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>+91 74084 76062</p>
+			</div>
+		</nav>
 
-			<!-- The Grid -->
-			<div class="w3-row-padding">
+		<!-- Top menu on small screens -->
+		<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+			<span class="w3-left w3-padding">Mrinal Jain</span>
+			<a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">&#9776;</a>
+		</header>
 
-				<!-- Left Column -->
-				<div class="w3-third">
+		<!-- Overlay effect when opening sidebar on small screens -->
+		<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-					<div class="w3-white w3-text-grey w3-card-4">
-						<div class="w3-display-container">
-							<img src="/assets/mrinal.png" style="width:100%" alt="Mrinal Jain">
-							<div class="w3-display-bottomleft w3-container w3-text-black">
-								<h2 class="w3-text-white">Mrinal Jain</h2>
-							</div>
-							<div class="w3-display-bottomright w3-container w3-text-black">
-								<button class="w3-btn w3-round-xxlarge w3-teal w3-margin-bottom" onclick="document.getElementById('aboutMe').style.display='block'">ABOUT</button>
-							</div>
-						</div>
-					
-						<div class="w3-container">
-							<p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Student</p>
-							<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Jhansi, Uttar Pradesh, India</p>
-							<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>mrinaljain007@gmail.com</p>
-							<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91 7408 47 6062</p>
-							<p>
-								<a class="w3-btn w3-round-large w3-teal" href="/assets/Resume.pdf" download="Mrinal_Jain_Resume.pdf">
-								My R&eacute;sum&eacute;</a>
-							</p>
-							<hr>
+		<!-- |PAGE CONTENT| -->
+		<div class="w3-main" style="margin-left:300px">
 
-							<p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-							
-							<table class="w3-table w3-bordered w3-hoverable w3-card-4">
-								<tr class="w3-teal">
-									<th>Skills</th>
-								</tr>
-								<tr>
-									<td>Programming</td>
-								</tr>
-								<tr>
-									<td>Data Structures and Algorithms</td>
-								</tr>
-								<tr>
-									<td>Data Science</td>
-								</tr>
-								<tr>
-									<td>Machine Learning</td>
-								</tr>
-								<tr>
-									<td>Deep Learning</td>
-								</tr>
-								<tr>
-									<td>Statistics</td>
-								</tr>
-							</table>
-							<br />
-							<table class="w3-table w3-bordered w3-hoverable w3-card-4">
-								<tr class="w3-teal">
-									<th>Programming Languages</th>
-									<th>Tools and Libraries</th>
-								</tr>
-								<tr>
-									<td rowspan="5">Python</td>
-									<td><a href="http://scikit-learn.org/stable/" target="_blank">Scikit-learn</a></td>
-								</tr>
-								<tr>
-									<td><a href="http://pandas.pydata.org/" target="_blank">Pandas</a></td>
-								</tr>
-								<tr>
-									<td><a href="http://www.numpy.org/" target="_blank">NumPy</a></td>
-								</tr>
-								<tr>
-									<td><a href="https://keras.io/" target="_blank">Keras</a></td>
-								</tr>
-								<tr>
-									<td><a href="https://docs.opencv.org/master/d6/d00/tutorial_py_root.html" target="_blank">OpenCV</a></td>
-								</tr>
-								<tr>
-									<td>C++</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>Java</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>HTML, CSS, Javascript</td>
-									<td></td>
-								</tr>
-							</table>
-							<hr />
-
-							<p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-							<p>English</p>
-							<div class="w3-light-grey w3-round-xlarge">
-								<div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-							</div>
-							<p>Hindi</p>
-							<div class="w3-light-grey w3-round-xlarge">
-								<div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-							</div>
-							<p>French</p>
-							<div class="w3-light-grey w3-round-xlarge">
-								<div class="w3-round-xlarge w3-teal" style="height:24px;width:20%"></div>
-							</div>
-							<br>
-						</div>
+			<!-- Push down content on small screens --> 
+			<div class="w3-hide-large" style="margin-top:83px"></div>
+  
+			<!-- About section -->
+			<div class="w3-container w3-white w3-center w3-text-dark-grey w3-padding-32" id="about">
+				<h4><b>About Me</b></h4>
+				<img src="https://github.com/MrinalJain17/MrinalJain17.github.io/blob/master/assets/image_mrinal_1.png" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+				<div class="w3-content w3-justify" style="max-width:600px">
+					<h4>Mrinal Jain</h4>
+					<p>I am currently in the 3rd year of my B.Tech in VIT University, Vellore. My branch is Information Technology. I am good at problem-solving and I also consider myself a good programmer. One of the reasons I am good at programming is because I love maths. I believe that computer science is closely related to mathematics. That's because mathematics improves the way one approaches a given problem, which in developing algorithms is a very important factor. So, keeping that in mind, I don't just rush to find a solution for the problem that's in front of me. I try to find different solutions, and then choose the one that's most suitable.</p>
+					<p>In particular, I have a very deep interest in AI, machine learning and data science. I find them very fascinating, and probably there's no limit to what one can achieve in this field. I am flexible in terms of programming languages, but I personally prefer python and c++ (depending on the kind of problem that I have).</p>
+					<p>That said, I am continuously working to improve my skills and trying to learn new things.</p>
+					<p><a class="w3-button w3-green w3-padding-large" href="/assets/Resume.pdf" 
+					download="Mrinal_Jain_Resume.pdf">Download R&eacute;sum&eacute;</a></p>
+				</div>
+			</div>
+			
+			<!-- Education section -->
+			<div class="w3-container w3-white w3-center w3-text-dark-grey w3-padding-32" style="display:none;" id="education">
+				<h4 style="margin-bottom:30px;"><b>Education</b></h4>
+				<div class="w3-content w3-justify" style="max-width:800px">
+					<div class="w3-container">
+						<h5><b>Vellore Institute of Technology, Vellore</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2019 (Expected Graduation)</h6>
+						<p>Bachelor of Technology in IT (Information Technology)</p>
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5><b>Modern School Barakhamba Road, New Delhi</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
+						<p>Senior Secondary, 11th and 12th Standard</p>
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5><b>Rani Laxmibai Public School, Jhansi (U.P.)</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2000 - 2013</h6>
+						<p>High School, 10th Standard</p>
+					</div>
+					<hr />
+				</div>
+			</div>
+			
+			<!-- Work Experience section -->
+			<div class="w3-container w3-white w3-center w3-text-dark-grey w3-padding-32" style="display:none;" id="work_experience">
+				<h4 style="margin-bottom:30px;"><b>Work Experience</b></h4>
+				<div class="w3-content w3-justify" style="max-width:800px">
+					<div class="w3-container">
+						<h5><b>Data Science Intern @ <a href="http://www.noodle.ai/" target="_blank">Noodle.ai</a></b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017 - Jul 2017 (5 weeks)</h6>
+						<p>Developed a tool (python package) that can be used to access and pre-process data obtained from the <a href="https://www.gdeltproject.org/" target="_blank">Global Database of Events, Language and Tone(GDELT)</a></p>
+						<p>The package is called <a class="w3-btn w3-round-xxlarge w3-wide w3-green" href="https://mrinaljain17.github.io/gydelt/" target="_blank">gydelt</a></p>
+					</div>
+					<br />
+				</div>
+			</div>
+			
+			<!-- Certifications section -->
+			<div class="w3-container w3-white w3-center w3-text-dark-grey w3-padding-32" style="display:none;" id="certifications">
+				<h4 style="margin-bottom:30px;"><b>Certifications</b></h4>
+				<div class="w3-content w3-justify" style="max-width:800px">
+					<div class="w3-container">
+						<h5><b>Neural Networks and Deep Learning, Andrew Ng's deeplearning.ai</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2017</h6>
+						<p>Completed the first course in the 5-course Deep Learning Specialization by Andrew Ng on Coursera <br />(<a href="https://www.coursera.org/account/accomplishments/certificate/3QRC35CVYN6G" target="_blank"><strong class="w3-text-red">View Certification</strong></a>)</p>
+					</div>
+					<hr />
+					<div class="w3-container">
+						<h5><b>Machine Learning Nanodegree, Udacity</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Dec 2017</h6>
+						<p>Completed the Machine Learning Engineer Nanodegree from Udacity (<a href="https://drive.google.com/file/d/1lEJDf-OWTZD302caTHO_u9O8LcVCioD3/view?usp=sharing" target="_blank"><strong class="w3-text-red">View Certification</strong></a>)</p>
+					</div>
+					<hr />
+				</div>
+			</div>
+			
+			<!-- Projects section -->
+			<div class="w3-container w3-white w3-text-dark-grey w3-padding-32" style="display:none;" id="projects">
+				<h4 class="w3-center" style="margin-bottom:30px;"><b>Projects</b></h4>
+				<div class="w3-content w3-justify" style="max-width:800px">
+					<div class="w3-container">
+						<h5><b>Projects under the Machine Learning Nanodegree</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Dec 2017 &nbsp;&nbsp;&nbsp;&nbsp;<a class="w3-btn w3-round-large w3-wide w3-green" href="https://github.com/MrinalJain17/Machine-Learning-Nanodegree" target="_blank"><i class="fa fa-code fa-fw w3-margin-right"></i>View on Github</a></h6>
+						<ul>
+							<li>
+								<p><strong>Predicting Boston Housing Prices</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/boston_housing/boston_housing.ipynb" target="_blank">(View jupyter notebook)</a></p>
+								<p>Built a model to predict the value of a given house in the Boston real estate market using various statistical analysis tools. Identified the best price that a client can sell their house utilizing machine learning.</p>
+							</li>
+							<li>
+								<p><strong>Finding Donors for CharityML</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/finding_donors/finding_donors.ipynb" target="_blank">(View jupyter notebook)</a></p>
+								<p>Investigated factors that affect the likelihood of charity donations being made based on real census data. Developed a naive classifier to compare testing results to. Trained and tested several supervised machine learning models on preprocessed census data to predict the likelihood of donations. Selected the best model based on accuracy, a modified F-scoring metric, and algorithm efficiency.</p>
+							</li>
+							<li>
+								<p><strong>Creating Customer Segments for a Wholesale Distributor</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/customer_segments/customer_segments.ipynb" target="_blank">(View jupyter notebook)</a></p>
+								<p>Reviewed unstructured data to understand the patterns and natural categories that the data fits into. Used multiple algorithms and both empirically and theoretically compared and contrasted their results. Made predictions about the natural categories of multiple types in a dataset, then checked these predictions against the result of unsupervised analysis.</p>
+							</li>
+							<li>
+								<p><strong>Trained a Smart cab to Drive</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/smartcab/smartcab.ipynb" target="_blank">(View jupyter notebook)</a></p>
+								<p>Applied reinforcement learning to build a simulated vehicle navigation agent. This project involved modeling a complex control problem in terms of limited available inputs, and designing a scheme to automatically learn an optimal driving strategy based on rewards and penalties.</p>
+							</li>
+							<li>
+								<p><strong>Creating a Dog Breed Classifier</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/dog-project/dog_app.ipynb" target="_blank">(View jupyter notebook)</a></p>
+								<p>Built an algorithm to identify canine breed given an image of a dog. If given image of a human, the algorithm identifies a resembling dog breed. Implemented techniques such as Deep Convolutional Neural Networks and Transfer Learning.</p>
+							</li>
+						</ul>
+					</div>
+					<hr />
+					<div class="w3-container">
+						<h5><b>Wrapper for accessing and pre-processing data from GDELT: <code>gydelt</code></b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017 - Aug 2017&nbsp;&nbsp;&nbsp;&nbsp;<a class="w3-btn w3-round-large w3-wide w3-green" href="https://mrinaljain17.github.io/gydelt/" target="_blank"><i class="fa fa-code fa-fw w3-margin-right"></i>View Project</a></h6>
+						<p>It's pretty complicated to get data from <a href="https://www.gdeltproject.org/" target="_blank">GDELT</a>. Not only accessing the data but preprocessing the data is also a tedious task. 'gydelt' is a wrapper that can be used to access and perform the basic preprocessing operations on the data obtained from GDELT. It has several datasets. This package is particularly for the Global Knowledge Graph (GKG)</p>
+					</div>
+					<hr />
+					<div class="w3-container">
+						<h5><b>Model of an Academic Portal for a College</b></h5>
+						<h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2017 - Mar 2017&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+						<p>Created a portal for an educational institution. Implemented some basic (but useful) functionalities such as:</p>
+						<ul>
+							<li><b>Login and Sign-up:&nbsp;&nbsp;</b> Each student and faculty would have their own account.</li>
+							<li><b>Attendance:&nbsp;&nbsp;</b> A faculty could update the attendance of the students registered under him/her.</li>
+							<li><b>Course Registration:&nbsp;&nbsp;</b> The students would be given the details of the courses offered by the institution. They can choose their courses, along with the faculty for each course.</li>
+							<li><b>Assignments:&nbsp;&nbsp;</b> The faculty could upload the assignment for his/her students. The students can submit their assignments which could be then evaluated by the respective faculty.</li>
+						</ul>
+						<p><em>This project was a model of the academic portal that we have at our college. It is a windows application, built using Java swing and JDBC. Database used was PostgreSQL.</em></p>
+					</div>
+					<hr />
+				</div>
+			</div>
+			
+			<!-- Skills section -->
+			<div class="w3-container w3-white w3-center w3-text-dark-grey w3-padding-32" style="display:none;" id="skills">
+				<h4 style="margin-bottom:30px;"><b>Skills</b></h4>
+				<div class="w3-content w3-justify" style="max-width:600px">
+					<table class="w3-table w3-bordered w3-hoverable w3-card-4">
+						<tr class="w3-blue-grey">
+							<th>Technical Skills</th>
+						</tr>
+						<tr>
+							<td>Programming</td>
+						</tr>
+						<tr>
+							<td>Data Structures and Algorithms</td>
+						</tr>
+						<tr>
+							<td>Data Science</td>
+						</tr>
+						<tr>
+							<td>Machine Learning</td>
+						</tr>
+						<tr>
+							<td>Deep Learning</td>
+						</tr>
+						<tr>
+							<td>Statistics</td>
+						</tr>
+					</table>
+					<hr />
+					<table class="w3-table w3-bordered w3-hoverable w3-card-4">
+						<tr class="w3-lime">
+							<th>Programming Languages</th>
+							<th>Tools and Libraries</th>
+						</tr>
+						<tr>
+							<td rowspan="5">Python</td>
+							<td><a href="http://scikit-learn.org/stable/" target="_blank">Scikit-learn</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://pandas.pydata.org/" target="_blank">Pandas</a></td>
+						</tr>
+						<tr>
+							<td><a href="http://www.numpy.org/" target="_blank">NumPy</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://keras.io/" target="_blank">Keras</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://docs.opencv.org/master/d6/d00/tutorial_py_root.html" target="_blank">OpenCV</a></td>
+						</tr>
+						<tr>
+							<td>C++</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Java</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>HTML, CSS, Javascript</td>
+							<td></td>
+						</tr>
+					</table>
+					<hr />
+					<p class="w3-large"><b>Languages</b></p>
+					<p>English</p>
+					<div class="w3-light-grey w3-round-xlarge">
+						<div class="w3-round-xlarge w3-red" style="height:24px;width:100%"></div>
+					</div>
+					<p>Hindi</p>
+					<div class="w3-light-grey w3-round-xlarge">
+						<div class="w3-round-xlarge w3-green" style="height:24px;width:100%"></div>
+					</div>
+					<p>French</p>
+					<div class="w3-light-grey w3-round-xlarge">
+						<div class="w3-round-xlarge w3-blue" style="height:24px;width:20%"></div>
 					</div>
 					<br>
-
-				<!-- End Left Column -->
 				</div>
-
-				<!-- Right Column -->
-				<div class="w3-twothird">
-
-					<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-						<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Data Science Intern @ <a href="http://www.noodle.ai/" target="_blank">Noodle.ai</a></b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017 - Jul 2017 (5 weeks)</h6>
-							<p>Developed a tool (python package) that can be used to access and pre-process data obtained from the <a href="https://www.gdeltproject.org/" target="_blank">Global Database of Events, Language and Tone(GDELT)</a></p>
-							<p>The package is called <a class="w3-btn w3-round-xxlarge w3-wide w3-teal" href="https://mrinaljain17.github.io/gydelt/" target="_blank">gydelt</a></p>
-						</div>
-						<hr />
-					</div>
-
-					<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-						<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-mortar-board fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Vellore Institute of Technology, Vellore</b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2019 (Expected Graduation)</h6>
-							<p>Bachelor of Technology in IT (Information Technology)</p>
-							<hr>
-						</div>
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Modern School Barakhamba Road, New Delhi</b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-							<p>Senior Secondary, 11th and 12th Standard</p>
-							<hr>
-						</div>
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Rani Laxmibai Public School, Jhansi (U.P.)</b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2000 - 2013</h6>
-							<p>High School, 10th Standard</p>
-						</div>
-						<hr />
-					</div>
-					
-					<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-						<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Certifications</h2>
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Machine Learning Nanodegree, Udacity</b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Dec 2017</h6>
-							<p>Completed the Machine Learning Engineer Nanodegree from Udacity (<a href="https://drive.google.com/file/d/1lEJDf-OWTZD302caTHO_u9O8LcVCioD3/view?usp=sharing" target="_blank"><strong class="w3-text-teal">View Certification</strong></a>)</p>
-						</div>
-						<hr />
-					</div>
-
-					<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-						<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-paper-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Projects under the Machine Learning Nanodegree</b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Ongoing &nbsp;&nbsp;&nbsp;&nbsp;<a class="w3-btn w3-round-large w3-wide w3-teal" href="https://github.com/MrinalJain17/Machine-Learning-Nanodegree" target="_blank"><i class="fa fa-code fa-fw w3-margin-right"></i>View on Github</a></h6>
-							<ul>
-								<li>
-									<p><strong>Predicting Boston Housing Prices</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/boston_housing/boston_housing.ipynb" target="_blank">(View jupyter notebook)</a></p>
-									<p>Built a model to predict the value of a given house in the Boston real estate market using various statistical analysis tools. Identified the best price that a client can sell their house utilizing machine learning.</p>
-								</li>
-								<li>
-									<p><strong>Finding Donors for CharityML</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/finding_donors/finding_donors.ipynb" target="_blank">(View jupyter notebook)</a></p>
-									<p>Investigated factors that affect the likelihood of charity donations being made based on real census data. Developed a naive classifier to compare testing results to. Trained and tested several supervised machine learning models on preprocessed census data to predict the likelihood of donations. Selected the best model based on accuracy, a modified F-scoring metric, and algorithm efficiency.</p>
-								</li>
-								<li>
-									<p><strong>Creating Customer Segments for a Wholesale Distributor</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/customer_segments/customer_segments.ipynb" target="_blank">(View jupyter notebook)</a></p>
-									<p>Reviewed unstructured data to understand the patterns and natural categories that the data fits into. Used multiple algorithms and both empirically and theoretically compared and contrasted their results. Made predictions about the natural categories of multiple types in a dataset, then checked these predictions against the result of unsupervised analysis.</p>
-								</li>
-								<li>
-									<p><strong>Trained a Smart cab to Drive</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/smartcab/smartcab.ipynb" target="_blank">(View jupyter notebook)</a></p>
-									<p>Applied reinforcement learning to build a simulated vehicle navigation agent. This project involved modeling a complex control problem in terms of limited available inputs, and designing a scheme to automatically learn an optimal driving strategy based on rewards and penalties.</p>
-								</li>
-								<li>
-									<p><strong>Creating a Dog Breed Classifier</strong>&nbsp;&nbsp;&nbsp;<a href="http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/dog-project/dog_app.ipynb" target="_blank">(View jupyter notebook)</a></p>
-									<p>Built an algorithm to identify canine breed given an image of a dog. If given image of a human, the algorithm identifies a resembling dog breed. Implemented techniques such as Deep Convolutional Neural Networks and Transfer Learning.</p>
-								</li>
-							</ul>
-						</div>
-						<hr />
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Wrapper for accessing and pre-processing data from GDELT: <code>gydelt</code></b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017 - Aug 2017&nbsp;&nbsp;&nbsp;&nbsp;<a class="w3-btn w3-round-large w3-wide w3-teal" href="https://mrinaljain17.github.io/gydelt/" target="_blank"><i class="fa fa-code fa-fw w3-margin-right"></i>View Project</a></h6>
-							<p>It's pretty complicated to get data from <a href="https://www.gdeltproject.org/" target="_blank">GDELT</a>. Not only accessing the data but preprocessing the data is also a tedious task. 'gydelt' is a wrapper that can be used to access and perform the basic preprocessing operations on the data obtained from GDELT. It has several datasets. This package is particularly for the Global Knowledge Graph (GKG)</p>
-						</div>
-						<hr />
-						<div class="w3-container">
-							<h5 class="w3-opacity"><b>Model of an Academic Portal for a College</b></h5>
-							<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2017 - Mar 2017&nbsp;&nbsp;&nbsp;&nbsp;</h6>
-							<p>Created a portal for an educational institution. Implemented some basic (but useful) functionalities such as:</p>
-							<ul>
-								<li><b>Login and Sign-up:&nbsp;&nbsp;</b> Each student and faculty would have their own account.</li>
-								<li><b>Attendance:&nbsp;&nbsp;</b> A faculty could update the attendance of the students registered under him/her.</li>
-								<li><b>Course Registration:&nbsp;&nbsp;</b> The students would be given the details of the courses offered by the institution. They can choose their courses, along with the faculty for each course.</li>
-								<li><b>Assignments:&nbsp;&nbsp;</b> The faculty could upload the assignment for his/her students. The students can submit their assignments which could be then evaluated by the respective faculty.</li>
-							</ul>
-							<p><em>This project was a model of the academic portal that we have at our college. It is a windows application, built using Java swing and JDBC. Database used was PostgreSQL.</em></p>
-						</div>
-						<hr />
-					</div>
-
-					<div id="aboutMe" class="w3-modal">
-						<div class="w3-modal-content w3-animate-top w3-card-4">
-							<header class="w3-container w3-teal w3-center w3-padding-32"> 
-								<span onclick="document.getElementById('aboutMe').style.display='none'" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-								<h2 class="w3-wide"><i class="fa fa-user-circle w3-margin-right"></i>About Me</h2>
-							</header>
-							<div class="w3-container">
-								<div class="w3-padding-large">
-									<p>Hello, I am Mrinal. I am currently in the 3rd year of my B.Tech in VIT University, Vellore. My branch is Information Technology</p>
-									<p>I am good at problem-solving and I also consider myself a good programmer. One of the reasons I am good at programming is because I love maths. I believe that computer science is closely related to mathematics. That's because mathematics improves the way one approaches a given problem, which in developing algorithms is a very important factor. So, keeping that in mind, I don't just rush to find a solution for the problem that's in front of me. I try to find different solutions, and then choose the one that's most suitable.</p>
-									<p>In particular, I have a very deep interest in AI, machine learning and data science. I find them very fascinating, and probably there's no limit to what one can achieve in this field.</p>
-									<p>I am flexible in terms of programming languages, but I personally prefer python and c++ (depending on the kind of problem that I have).</p>
-									<p>That said, I am continuously working to improve my skills and trying to learn new things.</p>
-								</div>
-								<button class="w3-button w3-red w3-section" onclick="document.getElementById('aboutMe').style.display='none'">Close <i class="fa fa-remove"></i></button>
-							</div>
-						</div>
-					</div>
-
-				<!-- End Right Column -->
-				</div>
-
-			<!-- End Grid -->
 			</div>
 
-		<!-- End Page Container -->
+		<!-- End Page Content -->
 		</div>
 
-		<footer class="w3-container w3-teal w3-center w3-margin-top">
-			<br>
-			<a href="https://www.linkedin.com/in/mrinal-jain-9b21ab114/" target="_blank"><i class="fa fa-linkedin-square w3-hover-opacity w3-xxlarge"></i></a>
-			<a href="https://www.github.com/MrinalJain17/" target="_blank"><i class="fa fa-github w3-hover-opacity w3-xxlarge"></i></a>
-			<p>Created using <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-		</footer>
+		<script>
+		// Script to open and close sidebar
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("myOverlay").style.display = "block";
+		}
+		 
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("myOverlay").style.display = "none";
+		}
+
+		// Script to toggle between different sections
+		function switch_page(page) {
+			document.getElementById("about").style.display = "none";
+			document.getElementById("education").style.display = "none";
+			document.getElementById("work_experience").style.display = "none";
+			document.getElementById("certifications").style.display = "none";
+			document.getElementById("projects").style.display = "none";
+			document.getElementById("skills").style.display = "none";
+			document.getElementById(page).style.display = "block";
+		}
+		</script>
 
 	</body>
 </html>
