@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Vision | Mrinal Jain</title>
+    <link>https://mrinaljain17.github.io/tag/computer-vision/</link>
+      <atom:link href="https://mrinaljain17.github.io/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <description>Computer Vision</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Mrinal Jain 2021</copyright><lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mrinaljain17.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Computer Vision</title>
+      <link>https://mrinaljain17.github.io/tag/computer-vision/</link>
+    </image>
+    
+    <item>
+      <title>Head and Neck CT image segmentation using deep learning</title>
+      <link>https://mrinaljain17.github.io/project/ct-image-segmentation/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://mrinaljain17.github.io/project/ct-image-segmentation/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Designed an end-to-end framework for segmenting organs in the head and neck CT images, achieving near-SOTA performance on the MICCAI Auto-segmentation Challenge (72.16 vs. 75.28 dice score).&lt;/li&gt;
+&lt;li&gt;Enhanced the baseline U-Net architecture by adding residual connections and a mixup training regime to prevent overfitting on the relatively small dataset (only ~30 CT scans).&lt;/li&gt;
+&lt;li&gt;Used Grad-CAM to interpret and understand the model predictions better.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Generating bird’s-eye view from multi-image scene using self-supervised learning</title>
+      <link>https://mrinaljain17.github.io/project/ssl-dl-project/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://mrinaljain17.github.io/project/ssl-dl-project/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Utilized a pre-trained denoising auto-encoder as a feature extractor for the task of road map construction.&lt;/li&gt;
+&lt;li&gt;Combined the feature embeddings of the multi-view scene captured from moving vehicles and used a U-Net to generate a top-down view of the binary road map.&lt;/li&gt;
+&lt;li&gt;Achieved a threat score of 0.70 on the hold-out test set (with the best score in the intra-class competition being ~0.81).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Neural Style Transfer</title>
+      <link>https://mrinaljain17.github.io/project/neural-style-transfer/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://mrinaljain17.github.io/project/neural-style-transfer/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Reimplemented the seminal work by Gatys et al. titled &amp;ldquo;A Neural Algorithm of Artistic Style&amp;rdquo; (using PyTorch).&lt;/li&gt;
+&lt;li&gt;Programmed numerous extensions to 
+&lt;a href=&#34;https://arxiv.org/abs/1606.05897&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;preserve color&lt;/a&gt; and improve the 
+&lt;a href=&#34;https://arxiv.org/abs/1605.04603&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;algorithm’s quality&lt;/a&gt; (primarily based on the gram matrix characteristics).&lt;/li&gt;
+&lt;li&gt;Implemented the fast style transfer method proposed by Johnson et al. working in real-time (~ seconds) compared to the original optimization-based algorithm (~ minutes).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

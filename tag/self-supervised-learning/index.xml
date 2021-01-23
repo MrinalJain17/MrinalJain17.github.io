@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self-supervised Learning | Mrinal Jain</title>
+    <link>https://mrinaljain17.github.io/tag/self-supervised-learning/</link>
+      <atom:link href="https://mrinaljain17.github.io/tag/self-supervised-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Self-supervised Learning</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Mrinal Jain 2021</copyright><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mrinaljain17.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Self-supervised Learning</title>
+      <link>https://mrinaljain17.github.io/tag/self-supervised-learning/</link>
+    </image>
+    
+    <item>
+      <title>Generating bird’s-eye view from multi-image scene using self-supervised learning</title>
+      <link>https://mrinaljain17.github.io/project/ssl-dl-project/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://mrinaljain17.github.io/project/ssl-dl-project/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Utilized a pre-trained denoising auto-encoder as a feature extractor for the task of road map construction.&lt;/li&gt;
+&lt;li&gt;Combined the feature embeddings of the multi-view scene captured from moving vehicles and used a U-Net to generate a top-down view of the binary road map.&lt;/li&gt;
+&lt;li&gt;Achieved a threat score of 0.70 on the hold-out test set (with the best score in the intra-class competition being ~0.81).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

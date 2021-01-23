@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python | Mrinal Jain</title>
+    <link>https://mrinaljain17.github.io/tag/python/</link>
+      <atom:link href="https://mrinaljain17.github.io/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Mrinal Jain 2021</copyright><lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mrinaljain17.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Python</title>
+      <link>https://mrinaljain17.github.io/tag/python/</link>
+    </image>
+    
+    <item>
+      <title>Mydia</title>
+      <link>https://mrinaljain17.github.io/project/mydia/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://mrinaljain17.github.io/project/mydia/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Developed an efficient and user-friendly python library for reading videos as NumPy tensors with more than 55,000* cumulative downloads (according to the tracker 
+&lt;a href=&#34;https://pepy.tech/project/mydia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PePy&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Utilized python’s multiprocessing capabilities to read (multiple) videos in parallel, thereby reducing video processing time by 4x compared to other similar tools.&lt;/li&gt;
+&lt;li&gt;Implemented other features, including custom frame selection in videos, frame resizing, grayscale conversion, and pixel normalization.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
